@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Sevebien</title>
+    <link rel="stylesheet" href="product-details-style.css">
+
+    <!-- Importing Font Family Spartan from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Importing Font Family Oswald from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Spartan:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Importing Icons from fontawesome website -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Importing Icons from google fonts website -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  HEADER  ################################## -->
+
+    <div class="header">
+        <div class="container">
+
+            <!-- Container for storing Logo, Navigation Links, and Icons -->
+            <div class="navbar">
+
+                <!-- Storing logo of the website in this div tag -->
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="main-img/Website-Logo.png" alt="Sevebien Logo" width="150px">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav>
+                    <ul id="ShowMenu">
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="product.html">PRODUCTS</a></li>
+                        <li><a href="account.html">ACCOUNTS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Icons of Cart and Menubar-->
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <i class="material-icons" onclick="menutoggle()">menubar</i>
+
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ########################################################################################## -->
+    <!-- ##################################  PRODUCT DETAILS  ################################## -->
+
+    <!-- We have used two classes below 1st is (container) and 2nd is (more-product) -->
+    <div class="container more-product">
+
+        <!-- prod-details-row class will hold both the columns and all the element inside it -->
+        <div class="prod-details-row">
+
+            <!-- Column-1 contains all the images on the left hand side -->
+            <div class="prod-details-col-1">
+
+                <!-- Main Big Image on the left hand side Of the screen. 
+                Also giving (id = ProductImg) to write Javascript code below -->
+                <img src="ecom-img/H-a1.jpeg" id="ProductImg" alt="">
+
+                <!-- small-img-row class to store three images below the main big image -->
+                <div class="small-img-row">
+
+                    <!-- Small Images -->
+                    <div class="small-img-col">
+                        <!-- We have written [class="small-img"] to write Javascript code -->
+                        <img src="ecom-img/H-a2.jpeg" class="small-img" alt="">
+                    </div>
+
+                    <div class="small-img-col img-2">
+                        <img src="ecom-img/H-a3.jpeg" class="small-img" alt="">
+                    </div>
+
+                    <div class="small-img-col img-3">
+                        <img src="ecom-img/H-a4.jpeg" class="small-img" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Column-2 contains all the details related to product -->
+            <div class="prod-details-col-2">
+                <p>Branded T-Shirts</p>
+                <h1>U.S Polo T-Shirt for Men</h1>
+                <h4>$24.99</h4>
+                <!-- Dropdown Menu to select the size of the clothes -->
+                <select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <!-- Input the number of product you want -->
+                <input type="number" value="1">
+                <!-- Buttns with extra (details-btn) class -->
+                <a href="" class="main-btn details-btn">Add To Cart</a>
+                <a href="" class="main-btn details-btn">Buy Now</a>
+                <!-- Product Description -->
+                <h3>Product Details</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi architecto id voluptatum repellendus velit quasi iste, quas modi culpa aliquam quibusdam, fugit praesentium quae rerum suscipit voluptatem explicabo earum molestiae aut provident quis reiciendis soluta obcaecati facilis? Ducimus nihil magni accusamus qui repellendus amet in commodi corporis maiores officia harum dolorum possimus iste, beatae aliquid nisi!</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  SEE MORE PRODUCTS  ################################## -->
+
+
+    <div class="all-prod">
+        <h2>See More Products</h2>
+
+        <div class="all-prod-row">
+
+            <!------------ FIRST ROW ------------>
+
+            <div class="all-prod-col">
+                <!-- Image of the product -->
+                <img src="ecom-img/T-c1.jpeg" alt="">
+                <!-- Label name of the product -->
+                <h4>Red & Black Trendy Sweatshirt</h4>
+                <!-- ratings class in which 5 star icons are stored -->
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <!-- Price of the product -->
+                <p>$19.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/T-a1.jpeg" alt="">
+                <h4>Regular Vogue Men's T-shirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$26.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/D-a1.jpeg" alt="">
+                <h4>Blue Floral Dress</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$27.49</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/D-b1.jpeg" alt="">
+                <h4>Women's Yellow T-shirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$19.99</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  FOOTER  ################################## -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Storing Text and the images of google store and apple store -->
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download our app for android and ios mobile phone. <br>Get our app from Google and Apple app
+                        store.</p>
+                    <img src="main-img/google-store.png" alt="">
+                    <img src="main-img/apple-store.png" alt="">
+                </div>
+
+                <!-- Storing Images of website logo and some text -->
+                <div class="footer-col2">
+                    <a href="home.html">
+                        <img src="main-img/Website-Logo.png" alt="">
+                    </a>
+                    <p>Visit our website or store get yourself clothes that suits you and make you look cool and
+                        different from others.</p>
+                </div>
+
+                <!-- Storing heading and some links to navigate -->
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="account.html">Your Account</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col4">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Youtube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">Copyright 2020 - Sevebien Clothing Store &copy;</p>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##########################  JAVASCRIPT  ######################### -->
+
+    <script>
+
+        // ^^^^^^^^^   JAVASCRIPT FOR MENU-TOGGLE BUTTON   ^^^^^^^^^
+
+        // Here we are fetching the elements which is inside the nav tag by its [id = ShowMenu]
+        var ShowMenu = document.getElementById("ShowMenu");
+
+        // Here, we are saying that at first the max-height of the ShowMenu.style should be 0px
+        // So that it won't be visible from the starting on the screen
+        ShowMenu.style.maxHeight = "0px";
+
+        // Initializing the menutoggle function
+        function menutoggle() {
+            // If (ShowMenu.style.maxHeight == "0px") then make it (ShowMenu.style.maxHeight = "200px")
+            // when I click on menubar. This will make it appear the links inside the nav tag.
+            if (ShowMenu.style.maxHeight == "0px") {
+                ShowMenu.style.maxHeight = "200px"
+            }
+
+            // Else if (ShowMenu.style.maxHeight == "200px") then make it (ShowMenu.style.maxHeight = "0px")
+            // when I again click on menubar. This will make it disappear the links inside the nav tag.
+            else {
+                ShowMenu.style.maxHeight = "0px"
+            }
+        }
+
+
+        // ^^^^^^^^^   JAVASCRIPT FOR PRODUCT DETAILS GALLERY   ^^^^^^^^^
+
+        // Here, we are equating the variable (ProductImg) with the id in [img] tag which is inside prod-details-col-1 class
+        var ProductImg = document.getElementById("ProductImg");
+
+        // Here, we are equating the variable (SmallImg) with the class in [img] tag which is inside small-img-col class
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        // Here, we are saying that if someone clicks on the 1st small image then show that image at the area of main big image. Here index number means the order of the small-image
+        SmallImg[0].onclick = function()
+        {
+            ProductImg.src = SmallImg[0].src
+        }
+
+        // Here, we are saying that if someone clicks on the 2nd small image then show that image at the area of main big image.
+        SmallImg[1].onclick = function()
+        {
+            ProductImg.src = SmallImg[1].src
+        }
+
+        // Here, we are saying that if someone clicks on the 3rd small image then show that image at the area of main big image.
+        SmallImg[2].onclick = function()
+        {
+            ProductImg.src = SmallImg[2].src
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

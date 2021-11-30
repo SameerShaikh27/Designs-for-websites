@@ -1,0 +1,1066 @@
+/*  Applying styles to all the html elements present on the html page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  Here, we are storing the values inside a certain variable so that we can use that value whenever we want,only by referreing to the variable name. It's just like a global variable.  */
+:root{
+    --bg-dark-blue-color: #003049;
+    --bg-orange-color: #f77f00;
+    --bg-lime-color: #fcbf49;
+    --bg-skin-color: #eae2b7;
+    --font-main-family: 'Oswald', sans-serif;
+    --font-common-family: 'Spartan', sans-serif;
+    
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  HEADER CSS  ################################## */
+
+/* Giving the background color to the header */
+.header{
+    background: radial-gradient(white, rgb(253, 183, 52)) ;
+}
+
+/* Applying styles to all the elements present inside the .conatiner class */
+.container{
+    max-width: 100%;
+    margin: auto;
+    padding: 0 50px;
+}
+
+/* Applying styles to all the elements present inside the .navbar class */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Aligning all the links inside nav tag to the right */
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+/* Applying styles to the elements present inside the ul tag of nav tag */
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+/* Giving the margin from the right to the links inside the list */
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Applying styles to the elements present inside the [a] tag*/
+nav ul li a{
+    text-decoration: none;
+    color: var(--bg-dark-blue-color);
+    font-family: var(--font-main-family);
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+/* Styling the line below the [a] tag. It is that line which appers on hovering over [a] tag */
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--bg-dark-blue-color);
+    display: block;
+    margin-left: 0;
+    transition: 0.5s;
+}
+
+/* Giving hovering effect to the [a] tag */
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* Giving the transition to image inside .logo class */
+.logo img{
+    transition: 0.5s;
+}
+
+/* Giving hovering effect to the logo image */
+.logo img:hover{
+    /* We have used transform property to icrease the size of the image when we hover over it */
+    transform: scale(1.2);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Dividing the .nav-bar into 2 columns */
+.navbar-row{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* Specifying the min-width of the .nav-col which is the text column */
+.navbar-col{
+    min-width: 300px;
+}
+
+/* Defining the width of the image and also positioning it */
+.navbar-col img{
+    width: 600px;
+    position: relative;
+    bottom: 60px;
+}
+
+/* Applying styles to the heading present inside the .navbar-col class */ 
+.navbar-col h1{
+    font-family: var(--font-main-family);
+    font-size: 64px;
+    font-weight: 500;
+    color: var(--bg-dark-blue-color);
+    line-height: 70px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+/* Applying styles to the [p] tag present inside the .navbar-col class */ 
+.navbar-col p{
+    font-family: var(--font-common-family);
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Applying styles to the .main-btn class to create a button */ 
+.main-btn{
+    display: inline-block;
+    background-color: rgb(253, 61, 28);
+    border: 2px solid rgb(253, 61, 28);
+    color: white;
+    padding: 8px 16px;
+    margin: 20px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: var(--font-common-family);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/* Giving hovering effect to .main-btn class */
+.main-btn:hover{
+    transform: scale(1.2);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Applying styles to the .fa-shopping-cart (Cart-Icon) present inside the .navbar class */ 
+.navbar .fa-shopping-cart{
+    font-size: 24px;
+    color: var(--bg-dark-blue-color);
+    transition: 0.5s;
+}
+
+/* Giving hovering effect to the .fa-shopping-cart class (Cart-Icons) */
+.navbar .fa-shopping-cart:hover{
+    transform: scale(1.2);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Applying styles to the .material-icons class (Menubar-Icon) present inside the .navbar class */
+.navbar .material-icons{
+    font-size: 30px;
+    color: var(--bg-dark-blue-color);
+    margin-left: 14px;
+    display: none;
+    cursor: pointer;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  HEADER MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Decreasing the padding of the .container class from left and right */
+    .container{
+        padding: 0 14px;
+    }
+
+    /* Here, we are displaying the menubar icon when the screen-size reduces to 700px and less  */
+    .navbar .material-icons{
+        display: block;
+    }
+
+    /* Giving position to both menubar and cart icon */
+    .navbar .fa-shopping-cart, .material-icons{
+        position: relative;
+        bottom: 40px;
+        left: 80px;
+    }
+
+    /* Positioning the website logo onto the screen */
+    .logo img{
+        position: relative;
+        bottom: 20px;
+        right: 40px;
+    }
+
+    /* Applyying the styles to the unordered lists */
+    nav ul{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: var(--bg-dark-blue-color);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    /* Here we are displaying the navbar links and also positioning it */
+    nav ul li{
+        display: block;
+        margin-right: 28px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Applying styles to the [a] tag */
+    nav ul li a{
+        color: white;
+        font-family: var(--font-common-family);
+        font-size: 10px;
+    }
+
+    /* Deciding the width of .navbar-col class elements */
+    .navbar-col{
+        min-width: 160px;
+    }
+    
+    /* Applying styles to the heading inside the .navbar-col class */
+    .navbar-col h1{
+        font-size: 46px;
+        line-height: 50px;
+    }
+    
+    /* Applying styles to the [p] tag inside the .navbar-col class */
+    .navbar-col p{
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    /* Reducing the padding, font-size and font-weight of the .main-btn class */
+    .main-btn{
+        padding: 6px 14px;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    
+    /* Reducing the scale of the hover effect */
+    .main-btn:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  FEATURED CATEGORIES CSS  ################################## */
+
+/* Applying styles to the elements present inside the .feat-cat class */
+.feat-cat{
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    margin-right: 150px;
+}
+
+/* Applying styles to the heading present inside the .feat-cat class */
+.feat-cat h2{
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-family: var(--font-main-family);
+    color: var(--bg-dark-blue-color);
+    font-size: 36px;
+}
+
+/* Styling the line below the heading */
+.feat-cat h2::after{
+    content: '';
+    width: 400px;
+    height: 4px;
+    background-color: var(--bg-orange-color);
+    display: block;
+    margin-top: 6px;
+}
+
+/* Dividing the .feat-row class into 4 columns */
+.feat-row{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-gap: 16px;
+}
+
+/* Giving the margin from the bottom to the .feat-row class */
+.feat-row{
+    margin-bottom: 30px;
+}
+
+/* Reducing the width of the image inside the .feat-col class by giving the it 100% */
+.feat-col img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* Giving the hovering effect to the image present inside the .feat-col class */
+.feat-col img:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FEATURED CATEGORIES MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Giving padding from the left to align contents inside the feat-cat class at the center */
+    .feat-cat{
+        padding-left: 20px;
+    }
+
+    /* Applying styles to the elements present inside .feat-row class */
+    .feat-row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 16px;
+    }
+
+    /* Reducing the margin from the bottom and font-size of the header */
+    .feat-cat h2{
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+
+    /* Positioning the .feat-col container */
+    .feat-col{
+        position: relative;
+        left: 18px;
+        margin-bottom: 10px;
+    }
+    
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  FEATURED PRODUCTS CSS  ################################## */
+
+/* Applying styles to the elements present inside the .feat-prod class */
+.feat-prod{
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    margin-right: 150px;
+}
+
+/* Applying styles to the heading present inside the .feat-prod class */
+.feat-prod h2{
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-family: var(--font-main-family);
+    color: var(--bg-dark-blue-color);
+    font-size: 36px;
+}
+
+/* Styling the line below the heading */
+.feat-prod h2::after{
+    content: '';
+    width: 400px;
+    height: 4px;
+    background-color: var(--bg-orange-color);
+    display: block;
+    margin-top: 6px;
+}
+
+/* Dividing the .feat-prod-row class into 4 columns */
+.feat-prod-row{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-column-gap: 20px;
+}
+
+/* Giving the margin from the bottom to the .feat-prod-col class */
+.feat-prod-col{
+    margin-bottom: 50px;
+    transition: 0.5s;
+}
+
+/* Reducing the width and height of the image present inside the .feat-prod-col class */
+.feat-prod-col img{
+    width: 180px;
+    height: 250px;
+}
+
+/* Applying styles to the heading present inside the .feat-prod-col class */
+.feat-prod-col h4{
+    font-family: var(--font-common-family);
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+/* Applying styles to the .material-icons class (Star-Icons) present inside the .ratings class */
+.ratings .material-icons{
+    color: var(--bg-orange-color);
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Applying styles to the [p] tag present inside the .feat-prod-col class */
+.feat-prod-col p{
+    font-family: var(--font-common-family);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+/* Giving the hovering effect to the .feat-prod-col class */
+.feat-prod-col:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FEATURED PRODUCTS MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+    
+    /* Giving a padding to the left-side so that we can align contents inside .feat-prod class at the center */
+    .feat-prod{
+        padding-left: 20px;
+    }
+
+    /* Reducing the font-size of the header inside .feat-prod class */
+    .feat-prod h2{
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+
+    /* Applying styles to the elemets present inside .feat-prod-row class */
+    .feat-prod-row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 30px;
+    }
+
+    /* Reducing the height and width of the image present inside the .feat-prod-col class */
+    .feat-prod-col img{
+        width: 150px;
+        height: 220px;
+    }
+
+    /* Reducing the font-size of the product name */
+    .feat-prod-col h4{
+        font-size: 12px;
+    }
+    
+    /* Reducing the size of star icons and also positioning them */
+    .ratings .material-icons{
+        position: relative;
+        top: 2px;
+        left: 0px;
+        font-size: 14px;
+    }
+    
+    /* Reducing the font-size of [p] tag inside the ..feat-prod-col class */
+    .feat-prod-col p{
+        font-size: 12px;
+    }
+
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################   LATEST PRODUCTS CSS  ################################## */
+
+/* All the comments above each class are same as the FEATURED PRODUCTS CSS */
+
+.latest-prod{
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    margin-right: 150px;
+}
+
+.latest-prod h2{
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-family: var(--font-main-family);
+    color: var(--bg-dark-blue-color);
+    font-size: 36px;
+}
+
+.latest-prod h2::after{
+    content: '';
+    width: 400px;
+    height: 4px;
+    background-color: var(--bg-orange-color);
+    display: block;
+    margin-top: 6px;
+}
+
+.latest-prod-row{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-column-gap: 20px;
+}
+
+.latest-prod-col{
+    margin-bottom: 50px;
+    transition: 0.5s;
+}
+
+.latest-prod-col img{
+    width: 180px;
+    height: 250px;
+}
+
+.latest-prod-col h4{
+    font-family: var(--font-common-family);
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.ratings .material-icons{
+    color: var(--bg-orange-color);
+    font-size: 20px;
+    text-align: center;
+}
+
+.latest-prod-col p{
+    font-family: var(--font-common-family);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.latest-prod-col:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ LATEST PRODUCTS MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Giving a padding to the left so that we can align contents inside .latest-prod class at the center */
+    .latest-prod{
+        padding-left: 20px;
+    }
+
+    /* Reducing the font-size of the header inside .latest-prod class */
+    .latest-prod h2{
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+
+    /* Applying styles to the elemets present inside .latest-prod-row class */
+    .latest-prod-row{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 30px;
+    }
+
+    /* Reducing the height and width of the image present inside the .latest-prod-col class */
+    .latest-prod-col img{
+        width: 150px;
+        height: 220px;
+    }
+
+    /* Reducing the font-size of the product name */
+    .latest-prod-col h4{
+        font-size: 12px;
+    }
+    
+    /* Reducing the size of star icons and also positioning them */
+    .ratings .material-icons{
+        position: relative;
+        top: 2px;
+        left: 0px;
+        font-size: 14px;
+    }
+    
+    /* Reducing the font-size of [p] tag inside the .latest-prod-col class */
+    .latest-prod-col p{
+        font-size: 12px;
+    }
+    
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  OFFER SECTION CSS  ################################## */
+
+/* Applying styles to the elements present inside the .offer class */
+.offer{
+    max-width: 100%;
+    margin: auto;
+    padding: 0 50px;
+    background: radial-gradient(white, rgba(255, 166, 0, 0.8));
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 70vh;
+}
+
+/* Dividing the .feat-prod-row class into 2 columns */
+.offer-row{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 40px;
+}
+
+/* Decreasing the width of the image */
+.offer-col2 img{
+    width: 80%;
+}
+
+/* Changing the position of the elements insode the offer-col1 class */
+.offer-col1{
+    position: relative;
+    top: 160px;
+}
+
+/* Applying styles to the [p] tag present inside the .offer-col1 class */
+.offer-col1 p{
+    font-size: 24px;
+    font-family: var(--font-common-family);
+}
+
+/* Applying styles to the heading present inside the .offer-col1 class */
+.offer-col1 h2{
+    font-size: 62px;
+    font-family: var(--font-main-family);
+    color: var(--bg-dark-blue-color);
+}
+
+/* Applying styles to the [small] tag present inside the .offer-col1 class */ 
+.offer-col1 small{
+    font-size: 16px;
+    font-family: var(--font-common-family);
+    display: block;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FEATURED PRODUCTS MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Reducing the padding, margin-top, and margin-bottom of the class .offer */
+    .offer{
+        padding: 0 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    /* Defining the width of the image and alos positioning it */
+    .offer-col2 img{
+        width: 150%;
+        position: relative;
+        top: 30px;
+        right: 70px;
+    }
+
+    /* Positioning the elements inside the .offer-col1 class */
+    .offer-col1{
+        position: relative;
+        top: 50px;
+    }
+    
+    /* Reducing the font-size and the margin-bottom of the [p] tag inside the .offer-col1 class */
+    .offer-col1 p{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    /* Reducing the font-size, line height and the margin-bottom of the header */
+    .offer-col1 h2{
+        font-size: 36px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+    
+    /* Reducing the font-size and the margin-bottom to close the distance from the button*/
+    .offer-col1 small{
+        font-size: 11px;
+        margin-bottom: -4px;
+    }
+
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  BRAND ASSOCIATED CSS  ################################## */
+
+/* Applying styles to the elements present inside the .brands class */
+.brands{
+    width: 80%;
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 60px;
+}
+
+/* Dividing the .feat-prod-row class into 5 columns */
+.brand-row{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+/* Giving the width to the elements inside the .brand-col class */
+.brand-col{
+    width: 150px;
+    margin-left: 14px;
+}
+
+/* Created an extra class to position the brands logo well */
+.down{
+    position: relative;
+    top: 20px;
+}
+
+/* Applying styles to the image inside .brand-col class */
+.brand-col img{
+    width: 100%;
+    height: 140px;
+    transition: 0.5s;
+}
+
+/* Giving the hovering effect to the image */
+.brand-col img:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ BRAND ASSOCIATED MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Reducing the margin from top and bottom around .brands class */
+    .brands{
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    /* Reducing the width of the elements present inside the .brands class */
+    .brand-col{
+        width: 60px;
+        margin-left: -2px;
+    }
+
+    /* Adjusting the position of the brands logo from the top */
+    .down{
+        position: relative;
+        top: 10px;
+    }
+    
+    /* Reduciing the width and height of the image */
+    .brand-col img{
+        width: 50px;
+        height: 70px;
+    }
+
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  FOOTER CSS  ################################## */
+
+/* Applying styles to all the elements inside the .footer class */
+.footer{
+    width: 100%;
+    background-color: #003c5ce7;
+    padding: 60px 0 20px;
+}
+
+/* Dividing .footer-row class into 4 columns */
+.footer-row{
+    display: grid;
+    grid-template-columns: 32% 28% 20% 20%;
+    margin-bottom: 10px;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL1  $$$$$$$$$$$$$$$$$$$$$$ */
+
+/* Applying styles to the heading inside the .footer-col1 class */
+.footer-col1 h3{
+    font-family: var(--font-common-family);
+    font-size: 26px;
+    color: var(--bg-skin-color);
+    margin-bottom: 8px;
+}
+
+/* Applying styles to the [p] tag inside the .footer-col1 class */
+.footer-col1 p{
+    font-family: var(--font-common-family);
+    font-size: 14px;
+    color: var(--bg-skin-color);
+    margin-bottom: 10px;
+}
+
+.footer-col1 img{
+    transition: 0.5s;
+}
+
+/* Giving the hovering effect to the image inside the .footer-col1 class */
+.footer-col1 img:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL2  $$$$$$$$$$$$$$$$$$$$$$ */
+
+/* Applying styles to the elements present inside the .footer-col2 class */
+.footer-col2{
+    text-align: center;
+    margin: 0 40px;
+    position: relative;
+    bottom: 60px;
+}
+
+/* Applying styles to the logo image present inside the .footer-col2 class */
+.footer-col2 img{
+    width: 160px;
+    margin-bottom: -20px;
+    transition: 0.5s;
+}
+
+/* Giving the hovering effect to the logo image inside the .footer-col2 class */
+.footer-col2 img:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Applying styles to the [p] tag present inside the .footer-col2 class */
+.footer-col2 p{
+    font-family: var(--font-common-family);
+    font-size: 12px;
+    color: var(--bg-skin-color);
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL3  $$$$$$$$$$$$$$$$$$$$$$ */
+
+/* Applying styles to the heading present inside the .footer-col3 class */
+.footer-col3 h3{
+    font-size: 24px;
+    font-weight: 500px;
+    font-family: var(--font-common-family);
+    padding-bottom: 6px;
+    color: white;
+    text-align: center;
+}
+
+/* Removing the bullet points of the links and aligning them to the center */
+.footer-col3 ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Giving margin to the bottom of after every list items */
+.footer-col3 ul li{
+    margin-bottom: 4px;
+}
+
+/* Applying styles to the [a] tag inside the .footer-col3 class */
+.footer-col3 ul li a{
+    font-size: 13px;
+    font-family: var(--font-common-family);
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Giving hovering effects to the [a] tag links */
+.footer-col3 ul li a:hover{
+    font-size: 14px;
+    color: var(--bg-orange-color);
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL4  $$$$$$$$$$$$$$$$$$$$$$ */
+
+/* All comments are same as the FOOTER-COL3 for the css here */
+
+.footer-col4 h3{
+    font-size: 24px;
+    font-weight: 500px;
+    font-family: var(--font-common-family);
+    padding-bottom: 6px;
+    color: white;
+    text-align: center;
+}
+
+.footer-col4 ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.footer-col4 ul li{
+    margin-bottom: 4px;
+}
+
+.footer-col4 ul li a{
+    font-size: 13px;
+    font-family: var(--font-common-family);
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-col4 ul li a:hover{
+    font-size: 14px;
+    color: var(--bg-orange-color);
+}
+
+/* Giving styles to the horizontal line above the copyright statement */
+.footer hr{
+    border: none;
+    background: black;
+    height: 3px;
+    margin-bottom: 30px;
+}
+
+/* Applying styles to the .copyright class */
+.copyright{
+    text-align: center;
+    font-family: var(--font-common-family);
+    font-size: 18px;
+    color: var(--bg-skin-color);
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the width of columns inside the .footer-cols class to 100% so that it can fit to the screen */
+    .footer-row{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL1  $$$$$$$$$$$$$$$$$$$$$$ */
+
+    /* Giving the margin at the bottom of Column-1 to maintain distance with other column */
+    .footer-col1{
+        margin-bottom: 60px;
+    }
+
+    /* Reducing the font-size of the header inside .footer-col1 class */
+    .footer-col1 h3{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Reducing the font-size and the margin-bottom of the [p] tag inside .footer-col1 class  */
+    .footer-col1 p{
+        font-size: 12px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* Positioning the image inside the .footer-col1 class */
+    .footer-col1 img{
+        position: relative;
+        left: 40px;
+    }
+
+    /* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL3  $$$$$$$$$$$$$$$$$$$$$$ */
+
+    /* Giving margin at the bottom of .footer-col3 container */
+    .footer-col3{
+        margin-bottom: 30px;
+    }
+
+    /* Giving padding at the bottom of the Useful Links */
+    .footer-col3 h3{
+        padding-bottom: 10px;
+    }
+
+    /* Giving margin at the bottom of the list links */
+    .footer-col3 ul li{
+        margin-bottom: 6px;
+    }
+
+    /* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL4  $$$$$$$$$$$$$$$$$$$$$$ */
+
+    /* Giving margin at the bottom of .footer-col4 container */
+    .footer-col4{
+        margin-bottom: 20px;
+    }
+
+    /* Giving padding at the bottom of the Useful Links */
+    .footer-col3 h4{
+        padding-bottom: 10px;
+    }
+
+    /* Giving margin at the bottom of the list links */
+    .footer-col4 ul li{
+        margin-bottom: 6px;
+    }
+
+    /* Reducing the margin-bottom below [hr] tag */
+    .footer hr{
+        margin-bottom: 20px;
+    }
+
+    /* Reducing the font-size of the text present inside the .copyright class */
+    .copyright{
+        font-size: 13px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

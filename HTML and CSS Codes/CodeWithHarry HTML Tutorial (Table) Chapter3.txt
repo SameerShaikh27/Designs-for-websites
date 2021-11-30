@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tennis Players Stats</h1>
+
+    <!-- TABLES -->
+    <!-- Here, we are using <div> tag as a container to store table. -->
+    <div>
+        <!-- We are using <table> tag to enable all the function insisde it. -->
+        <table>
+            <!-- We are using <thead> tag to differentiate head from the body -->
+            <thead>
+                <!-- We are using <caption> tag to display the info about the table -->
+                <caption>Top 5 atp ranking player's with their Master 1000 and Grand Slam count this year</caption>
+                <!-- We are using <tr> tag to create a row to so that we can write the heading of the table in it. -->
+                <tr> 
+                    <!-- In <th> tag we store the heading of the table. -->
+                    <th>Year</th>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Masters 1000</th>
+                    <th>Grand Slam</th>
+                </tr>
+            </thead> 
+
+             <!-- We are using <tbody> tag to differentiate body from the head. If we do any changes in the tbody tag then it won't affect the thead tag. For eg. if we want to add colors in the tbody or we want to change the style of it then we can do that and it won't affect the heading. -->
+            <tbody>
+                <tr>
+                    <!-- In <td> tag we store the data of the table. -->
+                    <td>2021</td>
+                    <td>1st</td>
+                    <td>Novak Djokovic</td>
+                    <td>0</td>
+                    <td>3</td>
+                </tr>
+
+                <tr>
+                    <td>2021</td>
+                    <td>2nd</td>
+                    <td>Danill Medvedev</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>2021</td>
+                    <td>3rd</td>
+                    <td>Stefanos Tsitsipas</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td>2021</td>
+                    <td>4th</td>
+                    <td>Alexander Zverev</td>
+                    <td>2</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <td>2021</td>
+                    <td>5th</td>
+                    <td>Andrey Rublev</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+</body>
+</html>

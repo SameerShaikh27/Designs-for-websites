@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Below is the most important heading tag, we usually use it as the heading of the page. -->
+    <h1>The Importance of Water</h1>
+
+    <!-- <a> is called anchor tag, which we use to insert multiple information in one tag. -->
+    <!-- href is an attribute which is always placed beside the anchor tag -->
+    <!-- Mostly we use them together to insert a link to button or any text -->
+    <a href="https://www.britannica.com/science/water">Water</a>
+
+    <!-- <p> is a paragrapgh tag, we can can parah inside it -->
+    <!-- We have written a dummy text of lorem ipsum by typing lorem and then mentioning the number of words we want after that press enter immediately. for eg (lorem45) -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum neque eius, autem, optio facere doloribus id corporis sit quo maiores, quam animi culpa consequatur voluptatem magnam delectus pariatur numquam? Saepe enim harum incidunt aut.</p>
+
+    <!-- Below we have written a heading tag from the most important to least important tag -->
+    <h1>Life is butiful</h1>
+    <h2>Life is butiful</h2>
+    <h3>Life is butiful</h3>
+    <h4>Life is butiful</h4>
+    <h5>Life is butiful</h5>
+    <h6>Life is butiful</h6>
+    
+    <!-- To display the image on the webpage we use img src tag. If we are using image form the internet just paste the link of the image into img src tag. If we are using image from our personal folder then write the location of the image with the name of the photo.  -->
+    <!-- The alt attribute is used when the image that we want to display to the screen is not visible due to some reason then whatever written in alt attribute will be shown to the screen. -->
+    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1632&q=80"  alt="Iron Man" width="150px">
+    
+     <!-- <br> tag is used to create break lines in an HTML page. It is an empty tag-->
+    <br>
+    <b>This line will be in BOLD</b>
+    <br>
+    <i>This line will be Italic</i>
+    <br>
+    <u>This line will get underline.</u>
+    <br>
+
+    <!-- Big Text and Small Text -->
+    <big>This line will get BIG</big>
+    <br>
+    <small>This line will get small</small>
+    
+    <!-- This tag is used to create a horizontal line to divide above and below section -->
+    <hr>
+
+    <!-- Subscript -->
+    <!-- We use subscript when we need to write some chemical reaction. We just have to put number or the thing that you want as a subscript in between <sub></sub> tag for eg: <sub>2</sub> -->
+    <p>H<sub>2</sub>O + CO<sub>2</sub> = H<sub>2</sub>CO<sub>3</sub></p>
+
+    <!-- Superscript -->
+    <!-- We use superscript when we need to write some mathematical formula. We just have to put number or the thing that you want as a superscript in between <sup></sup> tag for eg: <sup>2</sup> -->
+    <p>a<sup>2</sup> + 2ab + b<sup>2</sup></p>
+
+    <!-- <pre></pre> tag is used to display the text that we have copied from other website as it is.HTML tends to manipulate the text design by removing extra spaces, newlines, and many other things. -->
+    <pre>Upon contact, H2O and HCl combine to form hydronium cations H3O+ and chloride anions Cl− through a reversible chemical reaction:
+
+        HCl + H2O → H3O+ + Cl−
+        The resulting solution is called hydrochloric acid and is a strong acid. The acid dissociation or ionization constant, Ka, is large, which means HCl dissociates or ionizes practically completely in water. Even in the absence of water, hydrogen chloride can still act as an acid. For example, hydrogen chloride can dissolve in certain other solvents such as methanol:
+        
+        HCl + CH3OH → CH3O+H2 + Cl−</pre>    
+
+</body>
+</html>

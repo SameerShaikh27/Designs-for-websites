@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Sevebien</title>
+    <link rel="stylesheet" href="product-style.css">
+
+    <!-- Importing Font Family Spartan from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Importing Font Family Oswald from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Spartan:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Importing Icons from fontawesome website -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Importing Icons from google fonts website -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  HEADER  ################################## -->
+
+    <div class="header">
+        <div class="container">
+
+            <!-- Container for storing Logo, Navigation Links, and Icons -->
+            <div class="navbar">
+
+                <!-- Storing logo of the website in this div tag -->
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="main-img/Website-Logo.png" alt="Sevebien Logo" width="150px">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav>
+                    <ul id="ShowMenu">
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="product.html">PRODUCTS</a></li>
+                        <li><a href="account.html">ACCOUNTS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Icons of Cart and Menubar-->
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <i class="material-icons" onclick="menutoggle()">menubar</i>
+
+            </div>
+
+            <!-- Storing both text and Image in the navbar-row container -->
+            <div class="navbar-row">
+
+                <!-- Storing the vector Image in the header section -->
+                <div class="navbar-col">
+                    <img src="main-img/vec-shop-1.png" alt="Online Shopping">
+                </div>
+
+                <!-- Storing header, line of text below header, and main-btn class -->
+                <div class="navbar-col">
+                    <h1>GET YOUR HANDS DIRTY WITH OUR AMAZING COLLECTION.</h1>
+                    <p>Get Branded Clothes At Cheaper Price. <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Laudantium facere adipisci mollitia velit cum.</p>
+
+                    <a href="product.html" class="main-btn">Explore The Store &rarr;</a>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  ALL PRODUCTS  ################################## -->
+
+
+    <div class="all-prod">
+
+        <div class="title">
+            <h2>All Trendy Clothes</h2>
+            <select>
+                <option>Default Sorting</option>
+                <option>Sort by Price</option>
+                <option>Sort by Trend</option>
+                <option>Sort by Rating</option>
+                <option>Sort by Sale</option>
+            </select>
+        </div>
+
+        <div class="all-prod-row">
+
+            <!------------ FIRST ROW ------------>
+
+            <div class="all-prod-col">
+                <!-- Image of the product -->
+                <a href="product details.html">
+                    <img src="ecom-img/H-a1.jpeg" alt="">
+                </a>
+                <!-- Label name of the product -->
+                <h4>Red & Black Trendy Sweatshirt</h4>
+                <!-- ratings class in which 5 star icons are stored -->
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <!-- Price of the product -->
+                <p>$19.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/H-b1.jpeg" alt="">
+                <h4>Gucci Blue Sweatshirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$29.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/H-c1.jpeg" alt="">
+                <h4>Full Sleeve Men Sweatshirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$18.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/J-a1.jpeg" alt="">
+                <h4>Blanque Men Jacket</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$28.99</p>
+            </div>
+
+            <!------------ SECOND ROW ------------>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/J-b1.jpeg" alt="">
+                <h4>Denim Blue Women's Jacket</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$29.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/J-c1.jpeg" alt="">
+                <h4>Prada Blue Men's Jacket</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                </div>
+                <p>$34.49</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/J-d1.jpeg" alt="">
+                <h4>Women's Denim Jacket</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$32.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/P-a1.jpeg" alt="">
+                <h4>Men's Cargo Pant</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$26.49</p>
+            </div>
+
+            <!------------ THIRD ROW ------------>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/P-b1.jpeg" alt="">
+                <h4>Denim Jeans for Women</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$24.49</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/T-a1.jpeg" alt="">
+                <h4>Regular Vogue Men's T-shirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$26.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/T-b1.jpeg" alt="">
+                <h4>Strip T-shirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$21.49</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/T-c1.jpeg" alt="">
+                <h4>U.S Polo T-shirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                </div>
+                <p>$29.99</p>
+            </div>
+
+            <!------------ FOURTH ROW ------------>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/T-d1.jpeg" alt="">
+                <h4>Full Sleeve Men T-shirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$24.99</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/T-e1.jpeg" alt="">
+                <h4>Full Sleeve Women's T-shirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$21.49</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/D-a1.jpeg" alt="">
+                <h4>Blue Floral Dress</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$27.49</p>
+            </div>
+
+            <div class="all-prod-col">
+                <img src="ecom-img/D-b1.jpeg" alt="">
+                <h4>Women's Yellow T-shirt</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$19.99</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  ACCESSORIES  ################################## -->
+
+    <div class="acc-prod">
+        <h2>Top Accessories</h2>
+
+        <div class="acc-prod-row">
+
+            <!-- ------ FIRST ROW ------ -->
+
+            <div class="acc-prod-col">
+                <img src="ecom-img/S-a3.jpeg" alt="">
+                <h4>OWN Pasko-778 Hyper Shoes</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$34.99</p>
+            </div>
+
+            <div class="acc-prod-col">
+                <img src="ecom-img/S-b4.jpeg" alt="">
+                <h4>Nike Running Shoes</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                </div>
+                <p>$35.49</p>
+            </div>
+
+            <div class="acc-prod-col">
+                <img src="ecom-img/S-c1.jpeg" alt="">
+                <h4>Addidas Blue Moon Shoes</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$38.49</p>
+            </div>
+
+            <div class="acc-prod-col">
+                <img src="ecom-img/W-a1.jpeg" alt="">
+                <h4>Limestone Blue Men Watch</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$26.49</p>
+            </div>
+
+            <!-- ------ SECOND ROW ------ -->
+
+            <div class="acc-prod-col">
+                <img src="ecom-img/W-b1.jpeg" alt="">
+                <h4>Fasttrack Men YU Watch</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                </div>
+                <p>$33.49</p>
+            </div>
+
+            <div class="acc-prod-col">
+                <img src="ecom-img/W-c1.jpeg" alt="">
+                <h4>Flodra Women's Watch</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$24.49</p>
+            </div>
+
+            <div class="acc-prod-col">
+                <img src="ecom-img/B-a1.jpeg" alt="">
+                <h4>Louis Vuitton Blue HandBag</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_half</i>
+                </div>
+                <p>$39.99</p>
+            </div>
+
+            <div class="acc-prod-col">
+                <img src="ecom-img/B-b1.jpeg" alt="">
+                <h4>Prada Floral Grey Bag</h4>
+                <div class="ratings">
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star</i>
+                    <i class="material-icons">star_outline</i>
+                </div>
+                <p>$34.99</p>
+            </div>
+
+        </div>
+
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&rarr;</span>
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  FOOTER  ################################## -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Storing Text and the images of google store and apple store -->
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download our app for android and ios mobile phone. <br>Get our app from Google and Apple app
+                        store.</p>
+                    <img src="main-img/google-store.png" alt="">
+                    <img src="main-img/apple-store.png" alt="">
+                </div>
+
+                <!-- Storing Images of website logo and some text -->
+                <div class="footer-col2">
+                    <a href="home.html">
+                        <img src="main-img/Website-Logo.png" alt="">
+                    </a>
+                    <p>Visit our website or store get yourself clothes that suits you and make you look cool and
+                        different from others.</p>
+                </div>
+
+                <!-- Storing heading and some links to navigate -->
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="account.html">Your Account</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col4">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Youtube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">Copyright 2020 - Sevebien Clothing Store &copy;</p>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################### JAVASCRIPT FOR MENU-TOGGLE BUTTON  #################### -->
+
+    <script>
+
+        // Here we are fetching the elements which is inside the nav tag by its [id = ShowMenu]
+        var ShowMenu = document.getElementById("ShowMenu");
+
+        // Here, we are saying that at first the max-height of the ShowMenu.style should be 0px
+        // So that it won't be visible from the starting on the screen
+        ShowMenu.style.maxHeight = "0px";
+
+        // Initializing the menutoggle function
+        function menutoggle() {
+            // If (ShowMenu.style.maxHeight == "0px") then make it (ShowMenu.style.maxHeight = "200px")
+            // when I click on menubar. This will make it appear the links inside the nav tag.
+            if (ShowMenu.style.maxHeight == "0px") {
+                ShowMenu.style.maxHeight = "200px"
+            }
+
+            // Else if (ShowMenu.style.maxHeight == "200px") then make it (ShowMenu.style.maxHeight = "0px")
+            // when I again click on menubar. This will make it disappear the links inside the nav tag.
+            else {
+                ShowMenu.style.maxHeight = "0px"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

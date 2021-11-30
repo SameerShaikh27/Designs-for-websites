@@ -1,0 +1,668 @@
+/*  Applying styles to all the html elements present on the html page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  Here, we are storing the values inside a certain variable so that we can use that value whenever we want,only by referreing to the variable name. It's just like a global variable.  */
+:root{
+    --bg-dark-blue-color: #003049;
+    --bg-orange-color: #f77f00;
+    --bg-lime-color: #fcbf49;
+    --bg-skin-color: #eae2b7;
+    --font-main-family: 'Oswald', sans-serif;
+    --font-common-family: 'Spartan', sans-serif;
+    
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  HEADER CSS  ################################## */
+
+/* Applying styles to all the elements present inside the .conatiner class */
+.container{
+    max-width: 100%;
+    margin: auto;
+    padding: 0 120px;
+}
+
+/* Applying styles to all the elements present inside the .navbar class */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Aligning all the links inside nav tag to the right */
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+/* Applying styles to the elements present inside the ul tag of nav tag */
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+/* Giving the margin from the right to the links inside the list */
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Applying styles to the elements present inside the [a] tag*/
+nav ul li a{
+    text-decoration: none;
+    color: var(--bg-dark-blue-color);
+    font-family: var(--font-main-family);
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+/* Styling the line below the [a] tag. It is that line which appers on hovering over [a] tag */
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--bg-dark-blue-color);
+    display: block;
+    margin-left: 0;
+}
+
+/* Giving hovering effect to the [a] tag */
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* Giving the transition to image inside .logo class */
+.logo img{
+    transition: 0.5s;
+}
+
+/* Giving hovering effect to the logo image */
+.logo img:hover{
+    /* We have used transform property to icrease the size of the image when we hover over it */
+    transform: scale(1.2);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Dividing the .nav-bar into 2 columns */
+.navbar-row{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* Specifying the min-width of the .nav-col which is the text column */
+.navbar-col{
+    min-width: 300px;
+    text-align: right;
+}
+
+/* Defining the width of the image and also positioning it */
+.navbar-col img{
+    width: 600px;
+    position: relative;
+    bottom: 60px;
+}
+
+/* Applying styles to the heading present inside the .navbar-col class */ 
+.navbar-col h1{
+    font-family: var(--font-main-family);
+    font-size: 52px;
+    font-weight: 500;
+    color: var(--bg-dark-blue-color);
+    line-height: 60px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+/* Applying styles to the [p] tag present inside the .navbar-col class */ 
+.navbar-col p{
+    font-family: var(--font-common-family);
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Applying styles to the .main-btn class to create a button */ 
+.main-btn{
+    display: inline-block;
+    background-color: rgb(253, 61, 28);
+    border: 2px solid rgb(253, 61, 28);
+    color: white;
+    padding: 8px 16px;
+    margin: 20px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: var(--font-common-family);
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.5s;
+    
+}
+
+/* Giving hovering effect to .main-btn class */
+.main-btn:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Applying styles to the .fa-shopping-cart (Cart-Icon) present inside the .navbar class */ 
+.navbar .fa-shopping-cart{
+    font-size: 24px;
+    color: var(--bg-dark-blue-color);
+    transition: 0.5s;
+}
+
+/* Giving hovering effect to the .fa-shopping-cart class (Cart-Icons) */
+.navbar .fa-shopping-cart:hover{
+    transform: scale(1.2);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Applying styles to the .material-icons class (Menubar-Icon) present inside the .navbar class */
+.navbar .material-icons{
+    font-size: 30px;
+    color: var(--bg-dark-blue-color);
+    margin-left: 14px;
+    display: none;
+    cursor: pointer;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  HEADER MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Decreasing the padding of the .container class from left and right */
+    .container{
+        padding: 0 14px;
+    }
+
+    /* Here, we are displaying the menubar icon when the screen-size reduces to 700px and less  */
+    .navbar .material-icons{
+        display: block;
+    }
+
+    /* Giving position to both menubar and cart icon */
+    .navbar .fa-shopping-cart, .material-icons{
+        position: relative;
+        bottom: 40px;
+        left: 80px;
+    }
+
+    /* Positioning the website logo onto the screen */
+    .logo img{
+        position: relative;
+        bottom: 20px;
+        right: 40px;
+    }
+
+    /* Applyying the styles to the unordered lists */
+    nav ul{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: var(--bg-dark-blue-color);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    /* Here we are displaying the navbar links and also positioning it */
+    nav ul li{
+        display: block;
+        margin-right: 28px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Applying styles to the [a] tag */
+    nav ul li a{
+        color: white;
+        font-family: var(--font-common-family);
+        font-size: 10px;
+    }
+
+    /* Deciding the width of .navbar-col class elements */
+    .navbar-col{
+        min-width: 160px;
+    }
+    
+    /* Applying styles to the heading inside the .navbar-col class */
+    .navbar-col h1{
+        font-size: 46px;
+        line-height: 50px;
+    }
+    
+    /* Applying styles to the [p] tag inside the .navbar-col class */
+    .navbar-col p{
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    /* Reducing the padding, font-size and font-weight of the .main-btn class */
+    .main-btn{
+        padding: 6px 14px;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    
+    /* Reducing the scale of the hover effect */
+    .main-btn:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  CART ITEMS CSS  ################################## */
+
+/* Giving margin to the to all the elements inside .cart-page class */
+.cart-page{
+    margin: 40px auto 100px;
+}
+
+/* Applying styles to the table */
+table{
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+/* Here, we have given [flex-wrap: wrap;] so that image and product details could side by side */
+.cart-prod-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Applying styles to the product name inside the .cart-prod-info class */
+.cart-prod-info p{
+    font-family: var(--font-common-family);
+    color: var(--bg-dark-blue-color);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/* Applying styles to the price tag inside the .cart-prod-info class */
+.cart-prod-info small{
+    font-family: var(--font-common-family);
+    font-weight: 700;
+    font-size: 11px;
+}
+
+/* Applying styles to the table heading */
+th{
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background-color: var(--bg-orange-color);
+    font-family: var(--font-common-family);
+    font-size: 16px;
+}
+
+/* Applying styles to the data inside the table */
+td{
+    padding: 10px 0;
+    font-family: var(--font-common-family);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Applying styles to the input tag inside table data */
+td input{
+    width: 5vw;
+    height: 4vh;
+    padding: 10px;
+}
+
+/* Applying styles to the [a] tag inside table data */
+td a{
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid var(--bg-orange-color);
+    padding: 4px;
+    border-radius: 6px;
+    color: var(--bg-orange-color);
+    margin-top: 40px;
+}
+
+/* Applying styles to the image inside table data */
+td img{
+    width: 60px;
+    margin-right: 10px;
+}
+
+/* Postioning the 2nd Table to the right side */
+.total-price{
+    position: relative;
+    left: 25%;
+}
+
+/* Applying styles to the 2nd table */
+.total-price table{
+    border-top: 4px solid var(--bg-orange-color);
+    width: 100%;
+    max-width: 410px;
+}
+
+/* Aligning table data to the right */
+td:last-child{
+    text-align: right;
+}
+
+/* Aligning table heading to the right */
+th:last-child{
+    text-align: right;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  HEADER MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Reducing the margin from top and bottom of .cart-page class */
+    .cart-page{
+        margin: 0 auto 60px;
+    }
+
+    /* Increasing the width of the table to 90% so that it remain at the middle of the screen */
+    table{
+        width: 90%;
+    }
+
+    /* Reducing the font-size of the product name and also giving margin from the top */
+    .cart-prod-info p{
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    /* Increasin the width of the input where we write the number of the items we want */
+    td input{
+        width: 18vw;
+        height: 6vh;
+    }
+
+    /* Decreasing the width of the table to 90% so that it fits to the screen */
+    .total-price table{
+        width: 90%;
+    }
+
+    /* Removing the positioning from the left and giving some margin from the top */
+    .total-price{
+        margin-top: 20px;
+        position: relative;
+        left: 0%;
+    }
+
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* ##################################  FOOTER CSS  ################################## */
+
+/* Applying styles to all the elements inside the .footer class */
+.footer{
+    width: 100%;
+    background-color: #003c5ce7;
+    padding: 60px 0 20px;
+}
+
+/* Dividing .footer-row class into 4 columns */
+.footer-row{
+    display: grid;
+    grid-template-columns: 32% 28% 20% 20%;
+    margin-bottom: 10px;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL1  $$$$$$$$$$$$$$$$$$$$$$ */
+
+/* Applying styles to the heading inside the .footer-col1 class */
+.footer-col1 h3{
+    font-family: var(--font-common-family);
+    font-size: 26px;
+    color: var(--bg-skin-color);
+    margin-bottom: 8px;
+}
+
+/* Applying styles to the [p] tag inside the .footer-col1 class */
+.footer-col1 p{
+    font-family: var(--font-common-family);
+    font-size: 14px;
+    color: var(--bg-skin-color);
+    margin-bottom: 10px;
+}
+
+.footer-col1 img{
+    transition: 0.5s;
+}
+
+/* Giving the hovering effect to the image inside the .footer-col1 class */
+.footer-col1 img:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL2  $$$$$$$$$$$$$$$$$$$$$$ */
+
+/* Applying styles to the elements present inside the .footer-col2 class */
+.footer-col2{
+    text-align: center;
+    margin: 0 40px;
+    position: relative;
+    bottom: 60px;
+}
+
+/* Applying styles to the logo image present inside the .footer-col2 class */
+.footer-col2 img{
+    width: 160px;
+    margin-bottom: -20px;
+    transition: 0.5s;
+}
+
+/* Giving the hovering effect to the logo image inside the .footer-col2 class */
+.footer-col2 img:hover{
+    transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Applying styles to the [p] tag present inside the .footer-col2 class */
+.footer-col2 p{
+    font-family: var(--font-common-family);
+    font-size: 12px;
+    color: var(--bg-skin-color);
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL3  $$$$$$$$$$$$$$$$$$$$$$ */
+
+/* Applying styles to the heading present inside the .footer-col3 class */
+.footer-col3 h3{
+    font-size: 24px;
+    font-weight: 500px;
+    font-family: var(--font-common-family);
+    padding-bottom: 6px;
+    color: white;
+    text-align: center;
+}
+
+/* Removing the bullet points of the links and aligning them to the center */
+.footer-col3 ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Giving margin to the bottom of after every list items */
+.footer-col3 ul li{
+    margin-bottom: 4px;
+}
+
+/* Applying styles to the [a] tag inside the .footer-col3 class */
+.footer-col3 ul li a{
+    font-size: 13px;
+    font-family: var(--font-common-family);
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Giving hovering effects to the [a] tag links */
+.footer-col3 ul li a:hover{
+    font-size: 14px;
+    color: var(--bg-orange-color);
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL4  $$$$$$$$$$$$$$$$$$$$$$ */
+
+/* All comments are same as the FOOTER-COL3 for the css here */
+
+.footer-col4 h3{
+    font-size: 24px;
+    font-weight: 500px;
+    font-family: var(--font-common-family);
+    padding-bottom: 6px;
+    color: white;
+    text-align: center;
+}
+
+.footer-col4 ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.footer-col4 ul li{
+    margin-bottom: 4px;
+}
+
+.footer-col4 ul li a{
+    font-size: 13px;
+    font-family: var(--font-common-family);
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-col4 ul li a:hover{
+    font-size: 14px;
+    color: var(--bg-orange-color);
+}
+
+/* Giving styles to the horizontal line above the copyright statement */
+.footer hr{
+    border: none;
+    background: black;
+    height: 3px;
+    margin-bottom: 30px;
+}
+
+/* Applying styles to the .copyright class */
+.copyright{
+    text-align: center;
+    font-family: var(--font-common-family);
+    font-size: 18px;
+    color: var(--bg-skin-color);
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER MEDIA QUERIES  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the width of columns inside the .footer-cols class to 100% so that it can fit to the screen */
+    .footer-row{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL1  $$$$$$$$$$$$$$$$$$$$$$ */
+
+    /* Giving the margin at the bottom of Column-1 to maintain distance with other column */
+    .footer-col1{
+        margin-bottom: 60px;
+    }
+
+    /* Reducing the font-size of the header inside .footer-col1 class */
+    .footer-col1 h3{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* Reducing the font-size and the margin-bottom of the [p] tag inside .footer-col1 class  */
+    .footer-col1 p{
+        font-size: 12px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* Positioning the image inside the .footer-col1 class */
+    .footer-col1 img{
+        position: relative;
+        left: 40px;
+    }
+
+    /* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL3  $$$$$$$$$$$$$$$$$$$$$$ */
+
+    /* Giving margin at the bottom of .footer-col3 container */
+    .footer-col3{
+        margin-bottom: 30px;
+    }
+
+    /* Giving padding at the bottom of the Useful Links */
+    .footer-col3 h3{
+        padding-bottom: 10px;
+    }
+
+    /* Giving margin at the bottom of the list links */
+    .footer-col3 ul li{
+        margin-bottom: 6px;
+    }
+
+    /* $$$$$$$$$$$$$$$$$$$$$$  FOOTER-COL4  $$$$$$$$$$$$$$$$$$$$$$ */
+
+    /* Giving margin at the bottom of .footer-col4 container */
+    .footer-col4{
+        margin-bottom: 20px;
+    }
+
+    /* Giving padding at the bottom of the Useful Links */
+    .footer-col3 h4{
+        padding-bottom: 10px;
+    }
+
+    /* Giving margin at the bottom of the list links */
+    .footer-col4 ul li{
+        margin-bottom: 6px;
+    }
+
+    /* Reducing the margin-bottom below [hr] tag */
+    .footer hr{
+        margin-bottom: 20px;
+    }
+
+    /* Reducing the font-size of the text present inside the .copyright class */
+    .copyright{
+        font-size: 13px;
+    }
+
+}
+

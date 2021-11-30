@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account - Sevebien</title>
+    <link rel="stylesheet" href="account-style.css">
+
+    <!-- Importing Font Family Spartan from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Importing Font Family Oswald from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Spartan:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Importing Icons from fontawesome website -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Importing Icons from google fonts website -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  HEADER  ################################## -->
+
+    <div class="header">
+        <div class="container">
+
+            <!-- Container for storing Logo, Navigation Links, and Icons -->
+            <div class="navbar">
+
+                <!-- Storing logo of the website in this div tag -->
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="main-img/Website-Logo.png" alt="Sevebien Logo" width="150px">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav>
+                    <ul id="ShowMenu">
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="product.html">PRODUCTS</a></li>
+                        <li><a href="account.html">ACCOUNTS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Icons of Cart and Menubar-->
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <i class="material-icons" onclick="menutoggle()">menubar</i>
+
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  ACCOUNTS  ################################## -->
+
+    <!-- Container to store all the elements between header and footer -->
+    <div class="account">
+        <div class="acc-container">
+
+            <!-- Row which contains both Image and Form -->
+            <div class="acc-row">
+
+                <!-- 1st-COLUMN -->
+                <div class="acc-col">
+                    <!-- Image on the left hand side -->
+                    <img src="main-img/vec-shop-2.png" alt="">
+                </div>
+
+                <!-- 2nd-COLUMN -->
+                <div class="acc-col">
+                    <!-- Container to store Forms -->
+                    <div class="form-container">
+
+                        <!-- Above Login and Register text are used as a buttons to bring Login and Register form -->
+                        <!-- We have used onclick function below which is javascript to bring the forms-->
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <!-- LOGIN FORM -->
+                        <form action="" id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="main-btn">Login</button>
+                            <a href="">Forgot Password</a>
+                        </form>
+
+                        <!-- REGISTER FORM -->
+                        <form action="" id="RegisterForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email Address">
+                            <input type="text" placeholder="Password">
+                            <input type="password" placeholder="Confirm Password">
+                            <button type="submit" class="main-btn">Register</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  FOOTER  ################################## -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Storing Text and the images of google store and apple store -->
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download our app for android and ios mobile phone. <br>Get our app from Google and Apple app
+                        store.</p>
+                    <img src="main-img/google-store.png" alt="">
+                    <img src="main-img/apple-store.png" alt="">
+                </div>
+
+                <!-- Storing Images of website logo and some text -->
+                <div class="footer-col2">
+                    <a href="home.html">
+                        <img src="main-img/Website-Logo.png" alt="">
+                    </a>
+                    <p>Visit our website or store get yourself clothes that suits you and make you look cool and
+                        different from others.</p>
+                </div>
+
+                <!-- Storing heading and some links to navigate -->
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="">All Products</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Your Account</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col4">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Youtube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">Copyright 2020 - Sevebien Clothing Store &copy;</p>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##########################  JAVASCRIPT  ######################### -->
+
+    <script>
+
+        // ^^^^^^^^^   JAVASCRIPT FOR MENU-TOGGLE BUTTON   ^^^^^^^^^
+
+        // Here we are fetching the elements which is inside the nav tag by its [id = ShowMenu]
+        var ShowMenu = document.getElementById("ShowMenu");
+
+        // Here, we are saying that at first the max-height of the ShowMenu.style should be 0px
+        // So that it won't be visible from the starting on the screen
+        ShowMenu.style.maxHeight = "0px";
+
+        // Initializing the menutoggle function
+        function menutoggle() {
+            // If (ShowMenu.style.maxHeight == "0px") then make it (ShowMenu.style.maxHeight = "200px")
+            // when I click on menubar. This will make it appear the links inside the nav tag.
+            if (ShowMenu.style.maxHeight == "0px") {
+                ShowMenu.style.maxHeight = "200px"
+            }
+
+            // Else if (ShowMenu.style.maxHeight == "200px") then make it (ShowMenu.style.maxHeight = "0px")
+            // when I again click on menubar. This will make it disappear the links inside the nav tag.
+            else {
+                ShowMenu.style.maxHeight = "0px"
+            }
+        }
+
+
+        // ^^^^^^^^^   JAVASCRIPT TO TOGGLE FORM   ^^^^^^^^^
+
+        // Below, we are equating the variable with the id inside the [form] tag
+        var LoginForm = document.getElementById("LoginForm")
+        var RegisterForm = document.getElementById("RegisterForm")
+        var Indicator = document.getElementById("Indicator")
+
+        // Below, fuction will works as follows: When we click on the Register text then the line below which is #Indicator will move below the Register text and the register form will be displayed at the screen.
+        function register(){ 
+            RegisterForm.style.transform = "translateX(0px)"
+            LoginForm.style.transform = "translateX(0px)"
+            Indicator.style.transform = "translateX(100px)"
+        }
+
+        // Below, fuction will works as follows: When we click on the Login text then the line below which is #Indicator will move below the Login text and the Login form will be displayed at the screen.
+        function login(){ 
+            RegisterForm.style.transform = "translateX(400px)"
+            LoginForm.style.transform = "translateX(400px)"
+            Indicator.style.transform = "translateX(-10px)"
+        }
+
+    </script>
+
+</body>
+
+</html>

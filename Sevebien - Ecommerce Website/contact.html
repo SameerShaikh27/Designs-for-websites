@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevebien - Online Clothing Store</title>
+    <link rel="stylesheet" href="contact-style.css">
+
+    <!-- Importing Font Family Spartan from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Importing Font Family Oswald from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Spartan:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Importing Icons from fontawesome website -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- Importing Icons from google fonts website -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  HEADER  ################################## -->
+
+    <div class="header">
+        <div class="container">
+
+            <!-- Container for storing Logo, Navigation Links, and Icons -->
+            <div class="navbar">
+
+                <!-- Storing logo of the website in this div tag -->
+                <div class="logo">
+                    <a href="home.html">
+                        <img src="main-img/Website-Logo.png" alt="Sevebien Logo" width="150px">
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav>
+                    <ul id="ShowMenu">
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="product.html">PRODUCTS</a></li>
+                        <li><a href="account.html">ACCOUNTS</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Icons of Cart and Menubar-->
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <i class="material-icons" onclick="menutoggle()">menubar</i>
+
+            </div>
+
+            <!-- Storing both text and Image in the navbar-row container -->
+            <div class="navbar-row">
+
+                <!-- Storing header, line of text below header, and main-btn class -->
+                <div class="navbar-col">
+                    <h1>CONTACT US</h1>
+                    <p>GOntact us if you have problem with the delivered prducts. <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Laudantium facere adipisci mollitia velit cum.</p>
+
+                    <a href="product.html" class="main-btn">Explore The Store &rarr;</a>
+                </div>
+
+                <!-- Storing the vector Image in the header section -->
+                <div class="navbar-col">
+                    <img src="main-img/vec-shop-6.png" alt="Online Shopping">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ################################################################################################# -->
+    <!-- ################################################################################################# -->
+
+    <!-- ######################## CONTACT US PAGE CONTENT ###################### -->
+
+    <div class="contact-cont">
+        <div class="contact-cont-row">
+            <div class="contact-cont-left-col">
+
+                <div>
+                    <i class="material-icons">home</i>
+                    <span>
+                        <h4>Hanging Garden Road, Near Kennedy Bridge</h4>
+                        <p>Grant Road, Mumbai, India</p>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="material-icons">phone</i>
+                    <span>
+                        <h4>+19 543-142-671 | +18 536-271-321</h4>
+                        <p>Monday to Saturday, 9AM to 6AM</p>
+                    </span>
+                </div>
+
+                <div>
+                    <i class="material-icons">email</i>
+                    <span>
+                        <h4>sevebien@store.com</h4>
+                        <p>Email us for more enquiry</p>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="contact-cont-right-col">
+                <h3>Contact Us</h3>
+                <form action="" class="contact-form">
+                    <input type="text" placeholder="Enter Your Name">
+                    <input type="email" placeholder="Enter Your Email-ID">
+                    <input type="text" placeholder="Enter Your Country">
+                    <textarea rows="10" placeholder="Enter The Comment"></textarea>
+                    <button type="submit" class="contact-btn">Send Message</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################################  FOOTER  ################################## -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <!-- Storing Text and the images of google store and apple store -->
+                <div class="footer-col1">
+                    <h3>Download Our App</h3>
+                    <p>Download our app for android and ios mobile phone. <br>Get our app from Google and Apple app store.</p>
+                    <img src="main-img/google-store.png" alt="">
+                    <img src="main-img/apple-store.png" alt="">
+                </div>
+
+                <!-- Storing Images of website logo and some text -->
+                <div class="footer-col2">
+                    <a href="home.html">
+                        <img src="main-img/Website-Logo.png" alt="">
+                    </a>
+                    <p>Visit our website or store get yourself clothes that suits you and make you look cool and different from others.</p>
+                </div>
+
+                <!-- Storing heading and some links to navigate -->
+                <div class="footer-col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="product.html">All Products</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="account.html">Your Account</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col4">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Youtube</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">Copyright 2020 - Sevebien Clothing Store &copy;</p>
+
+        </div>
+    </div>
+
+
+    <!-- ##################################3######################################################## -->
+    <!-- ##################### JAVASCRIPT FOR MENU-TOGGLE BUTTON  #################### -->
+
+    <script>
+        
+        // Here we are fetching the elements which is inside the nav tag by its [id = ShowMenu]
+        var ShowMenu = document.getElementById("ShowMenu");
+
+        // Here, we are saying that at first the max-height of the ShowMenu.style should be 0px
+        // So that it won't be visible from the starting on the screen
+        ShowMenu.style.maxHeight = "0px";
+
+        // Initializing the menutoggle function
+        function menutoggle(){
+            // If (ShowMenu.style.maxHeight == "0px") then make it (ShowMenu.style.maxHeight = "200px")
+            // when I click on menubar. This will make it appear the links inside the nav tag.
+            if(ShowMenu.style.maxHeight == "0px")
+            {
+                ShowMenu.style.maxHeight = "200px"
+            }
+
+            // Else if (ShowMenu.style.maxHeight == "200px") then make it (ShowMenu.style.maxHeight = "0px")
+            // when I again click on menubar. This will make it disappear the links inside the nav tag.
+            else
+            {
+                ShowMenu.style.maxHeight = "0px"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

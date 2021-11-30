@@ -1,0 +1,528 @@
+/*  Applying styles to all the html elements present on the html page */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*  Here, we are storing the values inside a certain variable so that we can use that value whenever we want,only by referreing to the variable name. It's just like a global variable.  */
+:root{
+    --bg-color: #ce5d00;
+    --bgg-color: rgba(0, 73, 0, 1);
+    --main-font: Arial, Helvetica, sans-serif;
+    --nav-font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### HEADER CSS ###### /// */
+
+
+/* Here we are applying styles to the main image of the Home Page */
+.header{
+    min-height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(about-img/main-img.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Applying styles to all the elements present in the nav tag*/
+nav{
+    display: flex;
+    padding: 0 4%;
+    /* We have used (justify-content: space-between;) to give the space between the logo and nav-links */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Resizing the logo */
+nav img{
+    width: 150px;
+}
+
+/* Applying styles to the nav-links */
+.nav-links{
+    /* Below line means the size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it. */
+    flex: 1;
+    text-align: right;
+}
+
+/* Applying style to the list of links */
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 12px;
+    position: relative;
+}
+
+/* Applying styles to the anchor tag inside li */
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--nav-font);
+}
+
+/* Here, we are giving a style to (a) which means the nav-links. Here, we are also saying that after (a) provide this style. We are creating an underline below the links when we hover over it. But it will only visible if we hover over it*/
+.nav-links ul li a::after{
+    content: '';
+    /* Here, we have given (width: 0;) so that it won't be visible at first. It will get visible only if we hover over it */
+    width: 0;
+    height: 3px;
+    background-color: var(--bg-color);
+    display: block;
+    margin: auto;
+}
+
+/* Applying the style if someone hover over a nav-link */
+.nav-links ul li a:hover::after{
+    /* Here, we have given (width: 100;) so that it will be visible when we hover over it */
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* Applying style to the text which is at the center */
+.main-text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Applying style to the [h1] tag inside a .main-text class */
+.main-text h1{
+    font-size: 72px;
+    font-family: var(--main-font);
+    margin-right: 80px;
+    margin-top: 40px;
+}
+
+
+/* Applying style to the close icon class .fa which is inside nav tag */
+nav .material-icons{
+    display: none;
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the size of the logo of the website */
+    nav img{
+        width: 130px;
+    }
+
+    /* Changing the styles of the nav-links */
+    .nav-links{
+        position: fixed;
+        background-color: var(--bg-color);
+        height: 100vh;
+        width: 160px;
+        top: 0;
+        /* Here, we are giving (right: -200px;) to hide the menu which is on the right side */
+        right: -200px;
+        text-align: right;
+        z-index: 2;
+        padding-top: 12px;
+        transition: 1s;
+    }
+
+    /* Changing the style of the list of links */
+    .nav-links ul li{
+        display: block;
+    }
+
+    /* Changing the styles of the anchor tag inside li */
+    .nav-links ul li a{
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    /* Changing the style of the [h1] tag inside a .main-text class */
+    .main-text h1{
+        font-size: 24px;
+        margin-left: 80px;
+    }
+    
+    /* Here we are giving styles to the menu-bar and close icons which is inside the nav tag */
+    nav .material-icons{
+        display: block;
+        color: white;
+        margin-bottom: 70px;
+        margin-left: 130px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Applying style to the list of links all at once */
+    .nav-links ul{
+        padding: 12px 0;
+        padding-right: 4px;
+        float: right;
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### CONTACT US PAGE CSS CSS ###### /// */
+
+.contact-cont{
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.contact-cont-row{
+    display: grid;
+    grid-template-columns: 42% 58%;
+    grid-column-gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-cont-left-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-cont-left-col div .material-icons{
+    font-size: 28px;
+    color: var(--bgg-color);
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-cont-left-col div h4{
+    font-family: var(--main-font);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-cont-left-col div p{
+    font-family: var(--nav-font);
+    font-size: 14px;
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### CONTACT FORM CSS ###### /// */
+
+/* Appplying styles to all the elements present inside the .contact-cont-right-col class */
+.contact-cont-right-col{
+    border: 1px solid rgba(0, 73, 0, 1);
+    margin-top: 6px;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+/* Applying styles to the heading inside the .contact-cont-right-col class */
+.contact-cont-right-col h3{
+    text-align: left;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: var(--main-font);
+}
+
+/* Applying styles to both input and textare elements inside the .contact-cont-right-col class */
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 73, 0, 0.2);
+    font-size: 14px;
+    font-family: var(--nav-font);
+    border: 1px solid transparent;
+}
+
+/* Adding the hoverable effect on both the elements */
+.contact-form input:hover, .contact-form textarea:hover{
+    border: 1px solid rgba(0, 73, 0, 1);
+}
+
+/* Applying style to the .main-btn class */
+.main-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--bgg-color);
+    border: 2px solid var(--bgg-color);
+    padding: 12px 28px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-family: var(--nav-font);
+}
+
+/* Applying style to the .main-btn class when we hover over it */
+.main-btn:hover{
+    border: 2px solid var(--bgg-color);
+    background-color: var(--bgg-color);
+    color: white;
+    transition: 0.5s;
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Adding these two styles [display: grid; grid-template-columns: 100%;] so that we can align both left and right columns at the the center of the screen. */
+    .contact-cont-row{
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+    
+    .contact-cont-left-col div .material-icons{
+        font-size: 20px;
+        margin: 4px;
+        margin-right: 10px;
+    }
+    
+    .contact-cont-left-col div h4{
+        font-size: 14px;
+    }
+    
+    .contact-cont-left-col div p{
+        font-size: 12px;
+    }
+
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### FOOTER CSS ###### /// */
+
+/* Applying styles to all the elements present in the .footer class */
+.footer{
+    width: 100%;
+    padding: 20px;
+    height: 39vh;
+    /* background-color: rgba(0, 73, 0, 0.8); */
+    background-color: var(--bg-color);
+}
+
+/* Applying syles to all the 4 columns present in the .footer-cols class */
+.footer-cols{
+    /* With the help of grid I have divided the columns into 4 */
+    display: grid;
+    grid-template-columns: 30% 15% 15% 40%;
+    grid-column-gap: 40px;
+    margin-bottom: 10px;
+}
+
+/* ############################### COLUMN-1 OF [.footer-cols] class ############################### */
+
+/* Applying styles to the heading present inside the .footer-col1 class */
+.footer-col1 h4{
+    font-size: 24px;
+    font-weight: 500px;
+    font-family: var(--main-font);
+    padding-bottom: 10px;
+    color: white;
+}
+
+/* Applying styles to the [p] tag present inside the .footer-col1 class */
+.footer-col1 p{
+    font-size: 14px;
+    font-family: var(--nav-font);
+    color: white;
+}
+
+/* ############################### COLUMN-2 OF [.footer-cols] class ############################### */
+
+/* Applying styles to the heading present inside the .footer-col2 class */
+.footer-col2 h4{
+    font-size: 20px;
+    font-weight: 500px;
+    font-family: var(--main-font);
+    padding-bottom: 4px;
+    color: white;
+}
+
+/* Applying styles to the [p] tag present inside the .footer-col2 class */
+.footer-col2 p{
+    font-size: 14px;
+    font-family: var(--nav-font);
+    margin-bottom: 16px;
+}
+
+/* Applying styles to the [a] tag [p] tag .footer-col2 class */
+.footer-col2 p a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Giving the hoverable effect to the anchor tag */
+.footer-col2 p a:hover{
+    font-weight: 700;
+    color: var(--bgg-color);
+}
+
+/* ############################### COLUMN-3 OF [.footer-cols] class ############################### */
+
+/* Applying styles to the heading present inside the .footer-col3 class */
+.footer-col3 h4{
+    font-size: 20px;
+    font-weight: 500px;
+    font-family: var(--main-font);
+    padding-bottom: 4px;
+    color: white;
+}
+
+/* Applying styles to the [p] tag present inside the .footer-col3 class */
+.footer-col3 p{
+    font-size: 14px;
+    font-family: var(--nav-font);
+    margin-bottom: 16px;
+}
+
+/* Applying styles to the [a] tag [p] tag .footer-col3 class */
+.footer-col3 p a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Giving the hoverable effect to the anchor tag */
+.footer-col3 p a:hover{
+    font-weight: 700;
+    color: var(--bgg-color);
+}
+
+/* ############################### COLUMN-4 OF [.footer-cols] class ############################### */
+
+/* Applying styles to the heading present inside the .footer-col4 class */
+.footer-col4 h4{
+    font-size: 20px;
+    font-weight: 500px;
+    font-family: var(--main-font);
+    padding-bottom: 4px;
+    color: white;
+}
+
+/* Applying styles to the heading present inside the div of the .footer-col4 class */
+.footer-col4 div h5{
+    font-family: var(--main-font);
+    font-size: 14px;
+    color: white;
+}
+
+/* Applying styles to the [p] tag present inside the div of the .footer-col4 class */
+.footer-col4 div p{
+    font-family: var(--nav-font);
+    font-size: 12px;
+    color: white;
+}
+
+/* Applying styles to the icons present inside the div of the .footer-col4 class */
+.footer-col4 div .material-icons{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 280px;
+    bottom: 26px;
+}
+
+/* ############################### SECOND CLASS named as [.footer-row2] ############################### */
+
+/* Adding the margin to the element inside the .footer-row2 class */
+.footer-row2{
+    margin-top: 20px;
+}
+
+/* ############################### COLUMN-1 of [.footer-row2] ############################### */
+
+/* Adding the styles to the [p] tag inside the .footer-row2 class */
+.footer-row2 p{
+    text-align: center;
+    font-size: 20px;
+    font-family: var(--main-font);
+    color: white;
+    
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the height of the footer and applying some margin at the top to maintain distance */
+    .footer{
+        height: 860px;
+        margin-top: 30px;
+    }
+
+    /* Changing the width of columns inside the .footer-cols class to 100% so that it can fit to the screen */
+    .footer-cols{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Giving the margin at the bottom of Column-1 to maintain distance with other column */
+    .footer-col1{
+        margin-bottom: 20px;
+    }
+
+    /* Giving the margin at the bottom of Column-2 to maintain distance with other column */
+    .footer-col2{
+        margin-bottom: 20px;
+    }
+
+    /* Giving the margin at the bottom of Column-2 to maintain distance with other column */
+    .footer-col3{
+        margin-bottom: 20px;
+    }
+
+    /* Reducing the font-size and giving some margin from the right so that the text can be at the center of the screen*/
+    .footer-row2 p{
+        text-align: center;
+        font-size: 16px;
+        margin-right: 36px;  
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

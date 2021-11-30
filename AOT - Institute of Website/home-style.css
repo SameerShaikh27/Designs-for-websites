@@ -1,0 +1,873 @@
+/*  Applying styles to all the html elements present on the html page */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*  Here, we are storing the values inside a certain variable so that we can use that value whenever we want,only by referreing to the variable name. It's just like a global variable.  */
+:root{
+    --bg-color: #ce5d00;
+    --bgg-color: rgba(0, 73, 0, 1);
+    --main-font: Arial, Helvetica, sans-serif;
+    --nav-font: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### HEADER CSS ###### /// */
+
+
+/* Here we are applying styles to the main image of the Home Page */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(home-img/Inst3.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Applying styles to all the elements present in the nav tag*/
+nav{
+    display: flex;
+    padding: 0 4%;
+    /* We have used (justify-content: space-between;) to give the space between the logo and nav-links */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Resizing the logo */
+nav img{
+    width: 150px;
+}
+
+/* Applying styles to the nav-links */
+.nav-links{
+    /* Below line means the size of all of the other elements will have the same width as their content, but the element with flex: 1 will have the remaining full space given to it. */
+    flex: 1;
+    text-align: right;
+}
+
+/* Applying style to the list of links */
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 12px;
+    position: relative;
+}
+
+/* Applying styles to the anchor tag inside li */
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--nav-font);
+}
+
+/* Here, we are giving a style to (a) which means the nav-links. Here, we are also saying that after (a) provide this style. We are creating an underline below the links when we hover over it. But it will only visible if we hover over it*/
+.nav-links ul li a::after{
+    content: '';
+    /* Here, we have given (width: 0;) so that it won't be visible at first. It will get visible only if we hover over it */
+    width: 0;
+    height: 3px;
+    background-color: var(--bg-color);
+    display: block;
+    margin: auto;
+}
+
+/* Applying the style if someone hover over a nav-link */
+.nav-links ul li a:hover::after{
+    /* Here, we have given (width: 100;) so that it will be visible when we hover over it */
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* Applying style to the text which is at the center */
+.main-text{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Applying style to the [h1] tag inside a .main-text class */
+.main-text h1{
+    font-size: 52px;
+    font-family: var(--main-font);
+}
+
+/* Applying style to the [p] tag inside a .main-text class */
+.main-text p{
+    margin: 20px 0 60px;
+    font-size: 16px;
+    color: white;
+    font-family: var(--main-font);
+}
+
+/* Applying style to the .main-btn class */
+.main-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-family: var(--nav-font);
+}
+
+/* Applying style to the .main-btn class when we hover over it */
+.main-btn:hover{
+    border: 2px solid var(--bg-color);
+    background-color: var(--bg-color);
+    transition: 0.5s;
+}
+
+/* Applying style to the close icon class .fa which is inside nav tag */
+nav .material-icons{
+    display: none;
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the size of the logo of the website */
+    nav img{
+        width: 130px;
+    }
+
+    /* Changing the styles of the nav-links */
+    .nav-links{
+        position: fixed;
+        background-color: var(--bg-color);
+        height: 100vh;
+        width: 160px;
+        top: 0;
+        /* Here, we are giving (right: -200px;) to hide the menu which is on the right side */
+        right: -200px;
+        text-align: right;
+        z-index: 2;
+        padding-top: 12px;
+        transition: 1s;
+    }
+
+    /* Changing the style of the list of links */
+    .nav-links ul li{
+        display: block;
+    }
+
+    /* Changing the styles of the anchor tag inside li */
+    .nav-links ul li a{
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    /* Changing the style of the [h1] tag inside a .main-text class */
+    .main-text h1{
+        font-size: 30px;
+    }
+
+    /* Changing the style of the [p] tag inside a .main-text class */
+    .main-text p{
+        margin: 10px 0 40px;
+        font-size: 12px;
+    }
+     
+    /* Changing the style of the .main-btn class */
+    .main-btn{
+        padding: 8px 24px;
+        font-size: 12px;
+    }
+    
+    /* Here we are giving styles to the menu-bar and close icons which is inside the nav tag */
+    nav .material-icons{
+        display: block;
+        color: white;
+        margin-bottom: 70px;
+        margin-left: 130px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Applying style to the list of links all at once */
+    .nav-links ul{
+        padding: 12px 0;
+        padding-right: 4px;
+        float: right;
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### COURSES CSS ###### /// */
+
+/* Applying style to the class .course which is also a container which holds all the elemnts inside it */
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Applying style to the title heading present inside the class .course */
+.course h1{
+    font-size: 42px;
+    font-weight: 700px;
+    font-family: var(--main-font);
+}
+
+/* Applying style to the [p] tag present inside the class .course */
+.course p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 10px;
+    font-family: var(--nav-font);
+}
+
+/* This is the container which holds the 3 columns that we are looking on the screen */
+.course-row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Applying style to those 3 columns inside .course-row class */
+.course-col{
+    /* We are using the (flex basis = 30%) property-value to ensure the space between the box or columns */
+    flex-basis: 30%;
+    background-color: rgba(180, 102, 0, 0.4);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+/* Applying style to the heading inside .course-col class */
+.course-col h3{
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--main-font);
+}
+
+/* Applying style to the [p] tag inside .course-col class */
+.course-col p{
+    text-align: center;
+    font-family: var(--nav-font);
+}
+
+/* Giving the box shadow effect if someone hovers over that 3 columns */
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Reducing the size of the title of this container */
+    .course h1{
+        font-size: 36px;
+    }
+
+    /* Reducing the size of the [p] tag below the title of this container */
+    .course p{
+        font-size: 13px;
+    }
+
+    /* Changing the direction of flex-items from row to column, so that we can scroll the content vertically on mobile not horizonatlly for better user experience */
+    .course-row{
+        flex-direction: column;
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### CAMPUS CSS ###### /// */
+
+/* Applying style to all the elements which are present inside the .campus class */
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Applying style to the title heading present inside the class .campus */
+.campus h1{
+    font-size: 42px;
+    font-weight: 700px;
+    font-family: var(--main-font);
+}
+
+/* Applying style to the [p] tag present inside the class .campus */
+.campus p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 10px;
+    font-family: var(--nav-font);
+}
+
+/* Here we are giving style to the elemts which are present inside the class .campus-col */
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+
+/* Specifing the width of the image inside the class .campus-col */
+.campus-col img{
+    width: 320px;
+    display: block;
+} 
+
+/* Here, we are styling the green layer which appears when hover over the image*/
+.layer{
+    /* We have given [background: transparent;] so that the green layer won't be visible to us at first*/
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+/* Here, we are giving the background-color of the .layer class green when we hover over it*/
+.layer:hover{
+    background-color: rgba(0, 58, 0, 0.7);
+}
+
+/* Here, we are applying the styles to the name of the campus which appearns when we hover over the image */
+.layer h2{
+    width: 100%;
+    font-weight: 600;
+    font-size: 38px;
+    color: white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* Below, style will be taken under consideration when someone hover over the image */
+.layer:hover h2{
+    top: 49%;
+    opacity: 1;
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the width of the .campus-col class to 100%, so that if someone opens the website on mobile phone then image will appear at it's full width */
+    .campus-col {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .campus h1{
+        font-size: 36px;
+    }
+
+    .campus p{
+        font-size: 13px;
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### FACILITIES CSS ###### /// */
+
+/* Applying style to all the elements which are present inside the .facilities class */
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 600px;
+}
+
+/* Applying style to the title heading present inside the class .facilities */
+.facilities h1{
+    font-size: 42px;
+    font-weight: 700px;
+    font-family: var(--main-font);
+}
+
+/* Applying style to the [p] tag present inside the class facilities */
+.facilities p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 10px;
+    font-family: var(--nav-font);
+}
+
+/* Here we are giving style to the elemts which are present inside the class .facility-col */
+.facility-col{
+    flex-basis: 32%;
+    border-radius: 20px;
+    margin: 34px;
+    float: left;
+    text-align: center;  
+}
+
+/* Specifing the width and height and related styles to the image inside the class .facility-col */
+.facility-col img{
+    width: 280px;
+    height: 360px;
+    border-radius: 20px;
+    border: none;
+    border: 4px solid transparent;
+}
+
+/* Visibilizing the border when user hover over it */
+.facility-col img:hover{
+    border: 4px solid rgb(0, 73, 0);
+}
+
+/* Applying style to the heading inside .facility-col class */
+.facility-col h3{
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--main-font);
+    padding-top: 8px;
+}
+
+/* Applying style to the [p] tag inside .facility-col class */
+.facility-col p{
+    text-align: center;
+    font-size: 12px;
+    font-family: var(--nav-font);
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the width of the .campus-col class to 100%, so that if someone opens the website on mobile phone then image will appear at it's full width */
+    .facility-col{
+        width: 100%;
+        margin-left: -14px;
+        text-align: center;
+    }
+
+    /* Decreasing the font-size of the heading present inside the .facilities class */
+    .facilities h1{
+        font-size: 36px;
+    }
+
+    /* Decreasing the font-size of the [p] tag present inside the .facilities class */
+    .facilities p{
+        font-size: 13px;
+    }
+
+    /* Giving the marging to the heading inside the .facility-col to make it center to the screen */
+    .facility-col h3{
+        margin-left: 35px;
+    }
+
+    /* Giving the marging to the [p] tag inside the .facility-col to make it center to the screen */
+    .facility-col p{
+        margin-left: 35px;
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### REVIEW CSS ###### /// */
+
+/* Applying style to all the elements which are present inside the .review class */
+.review{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 640px;
+}
+
+/* Applying style to the title heading present inside the class .review */
+.review h1{
+    font-size: 42px;
+    font-weight: 700px;
+    font-family: var(--main-font);
+}
+
+/* Applying style to the [p] tag present inside the class .review */
+.review p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    padding: 10px;
+    font-family: var(--nav-font);
+}
+
+/* Here we are giving style to the elements which are present inside the class .review-col */
+.review-col{
+    float: left;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    margin-top: 30px;
+    margin-left: 30px;
+    text-align: left;
+    background-color: rgba(180, 102, 0, 0.4);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;    
+}
+
+/* Specifing the width and height and related styles to the image inside the class .review-col */
+.review-col img{
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+/* Giving the padding 0 to the [p] inside .review-col */
+.review-col p{
+    padding: 0;
+}
+
+
+/* Specifying the margin and aligning the text of heading inside the class .review-col */
+.review-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* Giving the color to the star icon that we have used below the alumni name */
+.review-col .material-icons{
+    color: rgb(0, 39, 0);
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the width of the .campus-col class to 100%, so that if someone opens the website on mobile phone then image will appear at it's full width */
+    .review-col{
+        width: 86%;
+        margin-left: 2px;
+        text-align: left;
+    }
+
+    /* Decreasing the font-size of the heading present inside the .review class */
+    .review h1{
+        font-size: 36px;
+    }
+
+    /* Decreasing the font-size of the [p] tag present inside the .review class */
+    .review p{
+        font-size: 13px;
+    }
+ 
+    /* Reducing the padding inside the container of .review-col */
+    .review-col{
+        padding: 15px;
+    }
+
+    /* Giving the font-size to the [p] tag inside that .review-col container  */
+    .review-col p{
+        font-size: 15px;
+    }
+ 
+    /* Reducing the margin around the images of alumni */
+    .review-col img{
+        margin-left: 2px;
+        margin-right: 15px;
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### DIRECTING TO CONTACT US PAGE CSS ###### /// */
+
+/* Applying style to all the elements which are present inside the .review class */
+.directing{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 340px;
+    margin-bottom: 10%;
+    padding-top: 640px;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(home-img/meeting.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.directing h1{
+    color: white;
+    font-family: var(--main-font);
+    font-size: 42px;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Giving the margin between the .review container and directing container and providing padding */
+    .directing{
+        margin-top: 800px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* Reducing the font-size of the heading present in the .directing class */
+    .directing h1{
+        font-size: 32px;
+    }
+}
+
+
+/* ######################################################################################################## */
+/* ######################################################################################################## */
+
+/* /// ###### FOOTER CSS ###### /// */
+
+/* Applying styles to all the elements present in the .footer class */
+.footer{
+    width: 100%;
+    padding: 20px;
+    height: 39vh;
+    /* background-color: rgba(0, 73, 0, 0.8); */
+    background-color: var(--bg-color);
+}
+
+/* Applying syles to all the 4 columns present in the .footer-cols class */
+.footer-cols{
+    /* With the help of grid I have divided the columns into 4 */
+    display: grid;
+    grid-template-columns: 30% 15% 15% 40%;
+    grid-column-gap: 40px;
+    margin-bottom: 10px;
+}
+
+/* ############################### COLUMN-1 OF [.footer-cols] class ############################### */
+
+/* Applying styles to the heading present inside the .footer-col1 class */
+.footer-col1 h4{
+    font-size: 24px;
+    font-weight: 500px;
+    font-family: var(--main-font);
+    padding-bottom: 10px;
+    color: white;
+}
+
+/* Applying styles to the [p] tag present inside the .footer-col1 class */
+.footer-col1 p{
+    font-size: 14px;
+    font-family: var(--nav-font);
+    color: white;
+}
+
+/* ############################### COLUMN-2 OF [.footer-cols] class ############################### */
+
+/* Applying styles to the heading present inside the .footer-col2 class */
+.footer-col2 h4{
+    font-size: 20px;
+    font-weight: 500px;
+    font-family: var(--main-font);
+    padding-bottom: 4px;
+    color: white;
+}
+
+/* Applying styles to the [p] tag present inside the .footer-col2 class */
+.footer-col2 p{
+    font-size: 14px;
+    font-family: var(--nav-font);
+    margin-bottom: 16px;
+}
+
+/* Applying styles to the [a] tag [p] tag .footer-col2 class */
+.footer-col2 p a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Giving the hoverable effect to the anchor tag */
+.footer-col2 p a:hover{
+    font-weight: 700;
+    color: var(--bgg-color);
+}
+
+/* ############################### COLUMN-3 OF [.footer-cols] class ############################### */
+
+/* Applying styles to the heading present inside the .footer-col3 class */
+.footer-col3 h4{
+    font-size: 20px;
+    font-weight: 500px;
+    font-family: var(--main-font);
+    padding-bottom: 4px;
+    color: white;
+}
+
+/* Applying styles to the [p] tag present inside the .footer-col3 class */
+.footer-col3 p{
+    font-size: 14px;
+    font-family: var(--nav-font);
+    margin-bottom: 16px;
+}
+
+/* Applying styles to the [a] tag [p] tag .footer-col3 class */
+.footer-col3 p a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Giving the hoverable effect to the anchor tag */
+.footer-col3 p a:hover{
+    font-weight: 700;
+    color: var(--bgg-color);
+}
+
+/* ############################### COLUMN-4 OF [.footer-cols] class ############################### */
+
+/* Applying styles to the heading present inside the .footer-col4 class */
+.footer-col4 h4{
+    font-size: 20px;
+    font-weight: 500px;
+    font-family: var(--main-font);
+    padding-bottom: 4px;
+    color: white;
+}
+
+/* Applying styles to the heading present inside the div of the .footer-col4 class */
+.footer-col4 div h5{
+    font-family: var(--main-font);
+    font-size: 14px;
+    color: white;
+}
+
+/* Applying styles to the [p] tag present inside the div of the .footer-col4 class */
+.footer-col4 div p{
+    font-family: var(--nav-font);
+    font-size: 12px;
+    color: white;
+}
+
+/* Applying styles to the icons present inside the div of the .footer-col4 class */
+.footer-col4 div .material-icons{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    left: 280px;
+    bottom: 26px;
+}
+
+/* ############################### SECOND CLASS named as [.footer-row2] ############################### */
+
+/* Adding the margin to the element inside the .footer-row2 class */
+.footer-row2{
+    margin-top: 20px;
+}
+
+/* ############################### COLUMN-1 of [.footer-row2] ############################### */
+
+/* Adding the styles to the [p] tag inside the .footer-row2 class */
+.footer-row2 p{
+    text-align: center;
+    font-size: 20px;
+    font-family: var(--main-font);
+    color: white;   
+}
+
+/* Here, we are saying that if a screen size gets reduced to (700px) then apply all these styles */
+@media screen and (max-width: 700px){
+
+    /* Changing the height of the footer and applying some margin at the top to maintain distance */
+    .footer{
+        height: 860px;
+        margin-top: 80px;
+    }
+
+    /* Changing the width of columns inside the .footer-cols class to 100% so that it can fit to the screen */
+    .footer-cols{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Giving the margin at the bottom of Column-1 to maintain distance with other column */
+    .footer-col1{
+        margin-bottom: 20px;
+    }
+
+    /* Giving the margin at the bottom of Column-2 to maintain distance with other column */
+    .footer-col2{
+        margin-bottom: 20px;
+    }
+
+    /* Giving the margin at the bottom of Column-2 to maintain distance with other column */
+    .footer-col3{
+        margin-bottom: 20px;
+    }
+
+    /* Reducing the font-size and giving some margin from the right so that the text can be at the center of the screen*/
+    .footer-row2 p{
+        text-align: center;
+        font-size: 16px;
+        margin-right: 36px;  
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
